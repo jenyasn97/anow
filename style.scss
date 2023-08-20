@@ -1,6 +1,20 @@
 @import "nullstyle.css";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap");
 
+$color-link: #222222;
+$link-hover: #fd8558;
+$color-gray: #999999;
+$color-white: #ffffff;
+$color-description: #333333;
+$color-bigtext: #f7f7f7;
+$btn-hover: #f95011;
+$border-color: #eeeeee;
+
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -35,10 +49,10 @@ body {
 
   &__link-item {
     font-size: 15px;
-    color: #222222;
+    color: $color-link;
 
     &:hover {
-      color: #fd8558;
+      color: $link-hover;
       transition: color 0.3s linear;
     }
   }
@@ -47,7 +61,7 @@ body {
 .header {
   background: url("./img/img_header/Group.jpg") center no-repeat;
   text-align: center;
-  color: #ffffff;
+  color: $color-white;
   margin-bottom: 210px;
 
   &__content {
@@ -69,7 +83,7 @@ body {
     margin-right: 30px;
 
     &:hover {
-      background-color: #fd8558;
+      background-color: $link-hover;
     }
   }
 
@@ -77,17 +91,17 @@ body {
     background-color: transparent;
 
     &:hover {
-      background-color: #fd8558;
+      background-color: $link-hover;
     }
   }
 }
 
 .btn {
-  color: #ffffff;
+  color: $color-white;
   font-size: 15px;
   line-height: 30px;
   padding: 12px 38px;
-  border: 1px solid #fd8558;
+  border: 1px solid $link-hover;
   transition: background-color 0.3s ease-in-out;
 }
 
@@ -102,7 +116,7 @@ body {
     left: -130px;
     font-size: 150px;
     line-height: 145px;
-    color: #f7f7f7;
+    color: $color-bigtext;
   }
 
   &__top {
@@ -110,21 +124,9 @@ body {
     margin-bottom: 60px;
   }
 
-  &__top-left {
-  }
-
-  &__top-right {
-  }
-
   &__bottom {
     display: flex;
     padding: 0 63px;
-  }
-
-  &__bottom-img {
-  }
-
-  &__bottom-text {
   }
 
   &__card {
@@ -148,14 +150,14 @@ body {
   &__card-title {
     font-size: 24px;
     line-height: 38.4px;
-    color: #333333;
+    color: $color-description;
     margin-bottom: 15px;
   }
 
   &__card-description {
     font-size: 15px;
     line-height: 25.5px;
-    color: #999999;
+    color: $color-gray;
   }
 }
 
@@ -172,14 +174,14 @@ body {
   &__top-description {
     font-size: 40px;
     line-height: 54px;
-    color: #333333;
+    color: $color-description;
     margin-top: 34px;
   }
 }
 
 .title {
   font-size: 14px;
-  color: #fd8558;
+  color: $link-hover;
   line-height: 15.4px;
   text-transform: uppercase;
 }
@@ -193,7 +195,7 @@ body {
   &__top-title {
     font-size: 18px;
     line-height: 28px;
-    color: #222222;
+    color: $color-link;
     margin-bottom: 10px;
     padding-top: 10px;
   }
@@ -201,7 +203,7 @@ body {
   &__top-description {
     font-size: 15px;
     line-height: 25.5px;
-    color: #999999;
+    color: $color-gray;
   }
 }
 
@@ -214,12 +216,12 @@ body {
   &__bottom-desc {
     font-size: 26px;
     line-height: 45px;
-    color: #222222;
+    color: $color-link;
     padding-top: 68px;
     max-width: 387px;
 
     span {
-      color: #fd8558;
+      color: $link-hover;
       font-style: italic;
     }
   }
@@ -233,7 +235,7 @@ body {
   &__bottom-name {
     font-size: 20px;
     line-height: 20px;
-    color: #222222;
+    color: $color-link;
     margin-bottom: 20px;
   }
 
@@ -244,16 +246,9 @@ body {
   }
 }
 
-.about {
-}
-
 .works {
   text-align: center;
   margin-bottom: 155px;
-
-
-  &__rect {
-  }
 
   &__container {
     position: relative;
@@ -261,10 +256,9 @@ body {
     &:after {
       content: "works";
       position: absolute;
-      right: 235px;
       font-size: 200px;
       line-height: 180px;
-      color: #f7f7f7;
+      color: $color-bigtext;
       z-index: -1;
       right: -100px;
     }
@@ -272,13 +266,10 @@ body {
 
 
   &__content {
-
     padding-top: 100px;
     display: flex;
     justify-content: space-between;
     align-items: end;
-
-
   }
 
   &__text {
@@ -302,12 +293,12 @@ body {
     font-size: 15px;
     font-weight: 700;
     line-height: 30px;
-    color: #ffffff;
+    color: $color-white;
     padding: 13px 37px;
-    background-color: #fd8558;
+    background-color: $link-hover;
 
     &:hover {
-      background-color: #f95011;
+      background-color: $btn-hover;
     }
 
     transition: background-color 0.3s ease-in-out;
@@ -341,7 +332,7 @@ body {
   &__box-container {
     width: 90%;
     padding: 40px;
-    background-color: #ffffff;
+    background-color: $color-white;
     opacity: 85%;
     display: flex;
     justify-content: space-between;
@@ -351,7 +342,7 @@ body {
   &__box-title {
     font-size: 24px;
     line-height: 33px;
-    color: #222222;
+    color: $color-link;
   }
 
   &__box-check {
@@ -408,9 +399,6 @@ body {
     margin-right: 78px;
   }
 
-  &__title {
-  }
-
   &__subtitle {
     font-size: 32px;
     line-height: 38.4px;
@@ -421,11 +409,8 @@ body {
   &__description {
     font-size: 14px;
     line-height: 25.5px;
-    color: #999999;
+    color: $color-gray;
     max-width: 456px;
-  }
-
-  &__list {
   }
 
   &__links {
@@ -443,20 +428,20 @@ body {
   &__links-line {
     width: 600px;
     height: 10px;
-    background-color: #eeeeee;
+    background-color: $border-color;
     position: relative;
   }
 
   &__links-title {
     font-size: 18px;
     line-height: 25.2px;
-    color: #222222;
+    color: $color-link;
   }
 
   &__links-proc {
     font-size: 15px;
     line-height: 23.4px;
-    color: #999999;
+    color: $color-gray;
   }
 }
 
@@ -540,28 +525,28 @@ body {
   &__box-name {
     font-size: 24px;
     line-height: 30px;
-    color: #ffffff;
+    color: $color-white;
     margin-bottom: 5px;
   }
 
   &__box-creater {
     font-size: 14px;
     line-height: 23.8px;
-    color: #ffffff;
+    color: $color-white;
   }
 
   &__btn {
     margin-top: 80px;
     padding: 13px 37px;
-    background: #fd8558;
+    background: $link-hover;
     font-size: 15px;
     line-height: 30px;
     font-weight: 700;
-    color: #ffffff;
+    color: $color-white;
     margin-bottom: 115px;
 
     &:hover {
-      background: #f95011;
+      background: $btn-hover;
       transition: background 0.3s linear;
     }
   }
@@ -607,7 +592,7 @@ body {
     font-size: 18px;
     line-height: 28.8px;
     letter-spacing: 0.2px;
-    color: #ffffff;
+    color: $color-white;
     text-align: center;
     max-width: 824px;
     width: 100%;
@@ -618,7 +603,7 @@ body {
       position: absolute;
       font-size: 200px;
       line-height: 220px;
-      color: #999999;
+      color: $color-bigtext;
       opacity: 0.1;
       top: -280px;
       left: -220px;
@@ -641,13 +626,13 @@ body {
   &__fio {
     font-size: 14px;
     line-height: 22.4px;
-    color: #ffffff;
+    color: $color-white;
   }
 
   &__name {
     font-size: 14px;
     line-height: 22.4px;
-    color: #ffffff;
+    color: $color-white;
   }
 
   &__creater {
@@ -671,7 +656,7 @@ body {
     margin-bottom: 15px;
     font-size: 32px;
     line-height: 41.6px;
-    color: #222222;
+    color: $color-link;
   }
 
   &__list {
@@ -687,8 +672,8 @@ body {
     line-height: 21px;
 
     &:hover {
-      transition: transform .3s linear;
       transform: scale(1.05);
+      transition: transform .3s linear;
     }
   }
 
@@ -703,16 +688,16 @@ body {
   }
 
   &__style {
-    color: #FD8558;
+    color: $link-hover;
     padding-right: 5px;
   }
 
   &__design {
-    color: #FD8558;
+    color: $link-hover;
   }
 
   &__date {
-    color: #999999;
+    color: $color-gray;
     position: relative;
     padding-left: 30px;
 
@@ -731,16 +716,15 @@ body {
     padding-top: 20px;
     font-size: 24px;
     line-height: 33px;
-    color: #222222;
+    color: $color-link;
     max-width: 326px;
+    margin-bottom: 36px;
   }
 
   &__link {
-    display: block;
-    padding-top: 36px;
     font-size: 15px;
     line-height: 31px;
-    color: #FD8558;
+    color: $link-hover;
 
     &:hover {
       color: #8D2701;
@@ -758,7 +742,6 @@ body {
 
   &__text {
     margin-right: 132px;
-
   }
 
   &__text-top {
@@ -769,7 +752,7 @@ body {
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 2px;
-    color: #222222;
+    color: $color-link;
     opacity: 0.4;
   }
 
@@ -777,15 +760,9 @@ body {
   &__text-subtitle {
     font-size: 24px;
     line-height: 33px;
-    color: #222222;
+    color: $color-link;
   }
 
-  &__text-bottom {
-  }
-
-  &__form {
-
-  }
 
   &__form-top {
     margin-bottom: 30px;
@@ -793,7 +770,7 @@ body {
     &::placeholder {
       font-size: 14px;
       line-height: 21px;
-      color: #999999;
+      color: $color-gray;
     }
 
   }
@@ -802,23 +779,38 @@ body {
     padding: 20px 40px;
     width: 338px;
     height: 58px;
-    border: 1px solid #eeeeee;
+    border: 1px solid $border-color;
     margin-right: 30px;
+
+    &:focus {
+      transition: box-shadow .3s linear;
+      box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    }
   }
 
   &__form-mail {
     padding: 20px 40px;
     width: 338px;
     height: 58px;
-    border: 1px solid #eeeeee;
+    border: 1px solid $border-color;
+
+    &:focus {
+      transition: box-shadow .3s linear;
+      box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    }
   }
 
   &__form-text {
     padding: 20px 40px;
     width: 100%;
     height: 128px;
-    border: 1px solid #eeeeee;
+    border: 1px solid $border-color;
     resize: none;
+
+    &:focus {
+      transition: box-shadow .3s linear;
+      box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    }
   }
 
   &__form-btn {
@@ -826,12 +818,12 @@ body {
     font-size: 14px;
     font-weight: 700;
     line-height: 21px;
-    color: #ffffff;
+    color: $color-white;
     padding: 17px 38px;
-    background: #FD8558;
+    background: $link-hover;
 
     &:hover {
-      background: #f95011;
+      background: $btn-hover;
       transition: background 0.3s linear;
     }
   }
@@ -839,7 +831,7 @@ body {
 
 .footer {
   background: #111111;
-  color: #ffffff;
+  color: $color-white;
   margin-top: 100px;
 
   &__container {
@@ -859,14 +851,14 @@ body {
     line-height: 54px;
     display: block;
     margin-bottom: 20px;
-    color: #eeeeee;
+    color: $border-color;
 
   }
 
   &__phone {
     font-size: 15px;
     line-height: 22.5px;
-    color: #ffffff;
+    color: $color-white;
     opacity: .6;
     margin-right: 20px;
   }
@@ -874,7 +866,7 @@ body {
   &__span {
     font-size: 15px;
     line-height: 22.5px;
-    color: #ffffff;
+    color: $color-white;
     opacity: .6;
     position: relative;
     margin-right: 10px;
@@ -893,7 +885,7 @@ body {
   &__mail {
     font-size: 15px;
     line-height: 22.5px;
-    color: #ffffff;
+    color: $color-white;
     opacity: .6;
   }
 
@@ -915,7 +907,7 @@ body {
     display: block;
     font-size: 24px;
     line-height: 31.2px;
-    color: #ffffff;
+    color: $color-white;
     margin-bottom: 20px;
   }
 
@@ -927,7 +919,7 @@ body {
     margin-bottom: 10px;
 
     &:hover {
-      color: #ffffff;
+      color: $color-white;
       transition: color .3s linear;
     }
   }
@@ -944,7 +936,7 @@ body {
     color: #BABABA;
 
     span {
-      color: #ffffff;
+      color: $color-white;
     }
   }
 }

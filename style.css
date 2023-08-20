@@ -1,5 +1,9 @@
 @import "nullstyle.css";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -204,7 +208,6 @@ body {
 .works__container:after {
   content: "works";
   position: absolute;
-  right: 235px;
   font-size: 200px;
   line-height: 180px;
   color: #f7f7f7;
@@ -503,7 +506,7 @@ body {
   position: absolute;
   font-size: 200px;
   line-height: 220px;
-  color: #999999;
+  color: #f7f7f7;
   opacity: 0.1;
   top: -280px;
   left: -220px;
@@ -560,8 +563,8 @@ body {
   line-height: 21px;
 }
 .planet__items:hover {
-  transition: transform 0.3s linear;
   transform: scale(1.05);
+  transition: transform 0.3s linear;
 }
 .planet__img {
   width: 360px;
@@ -571,11 +574,11 @@ body {
   padding-top: 28px;
 }
 .planet__style {
-  color: #FD8558;
+  color: #fd8558;
   padding-right: 5px;
 }
 .planet__design {
-  color: #FD8558;
+  color: #fd8558;
 }
 .planet__date {
   color: #999999;
@@ -597,13 +600,12 @@ body {
   line-height: 33px;
   color: #222222;
   max-width: 326px;
+  margin-bottom: 36px;
 }
 .planet__link {
-  display: block;
-  padding-top: 36px;
   font-size: 15px;
   line-height: 31px;
-  color: #FD8558;
+  color: #fd8558;
 }
 .planet__link:hover {
   color: #8D2701;
@@ -649,11 +651,19 @@ body {
   border: 1px solid #eeeeee;
   margin-right: 30px;
 }
+.message__form-name:focus {
+  transition: box-shadow 0.3s linear;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+}
 .message__form-mail {
   padding: 20px 40px;
   width: 338px;
   height: 58px;
   border: 1px solid #eeeeee;
+}
+.message__form-mail:focus {
+  transition: box-shadow 0.3s linear;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
 }
 .message__form-text {
   padding: 20px 40px;
@@ -662,6 +672,10 @@ body {
   border: 1px solid #eeeeee;
   resize: none;
 }
+.message__form-text:focus {
+  transition: box-shadow 0.3s linear;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+}
 .message__form-btn {
   margin-top: 65px;
   font-size: 14px;
@@ -669,7 +683,7 @@ body {
   line-height: 21px;
   color: #ffffff;
   padding: 17px 38px;
-  background: #FD8558;
+  background: #fd8558;
 }
 .message__form-btn:hover {
   background: #f95011;
