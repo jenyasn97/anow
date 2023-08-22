@@ -9,9 +9,11 @@ $color-description: #333333;
 $color-bigtext: #f7f7f7;
 $btn-hover: #f95011;
 $border-color: #eeeeee;
+$sizeNormal: 15px;
+$sizeBig: 24px;
 
 
-html {
+html{
   scroll-behavior: smooth;
 }
 
@@ -22,6 +24,32 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.btn {
+  color: $color-white;
+  font-size: $sizeNormal;
+  line-height: 30px;
+  padding: 12px 38px;
+  border: 1px solid $link-hover;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $btn-hover;
+  }
+}
+
+.title {
+  font-size: 14px;
+  color: $link-hover;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 32px;
+  line-height: 38px;
+  color: $color-link;
 }
 
 .navigation {
@@ -48,7 +76,7 @@ body {
   }
 
   &__link-item {
-    font-size: 15px;
+    font-size: $sizeNormal;
     color: $color-link;
 
     &:hover {
@@ -65,13 +93,13 @@ body {
   margin-bottom: 210px;
 
   &__content {
-    padding-top: 181.5px;
-    padding-bottom: 318.5px;
+    padding-top: 180px;
+    padding-bottom: 318px;
   }
 
   &__text {
-    margin-bottom: 40.5px;
-    line-height: 85.4px;
+    margin-bottom: 40px;
+    line-height: 85px;
 
     h1 {
       font-size: 70px;
@@ -81,29 +109,13 @@ body {
   &__btns-left {
     background-color: transparent;
     margin-right: 30px;
-
-    &:hover {
-      background-color: $link-hover;
-    }
   }
 
   &__btns-right {
     background-color: transparent;
-
-    &:hover {
-      background-color: $link-hover;
-    }
   }
 }
 
-.btn {
-  color: $color-white;
-  font-size: 15px;
-  line-height: 30px;
-  padding: 12px 38px;
-  border: 1px solid $link-hover;
-  transition: background-color 0.3s ease-in-out;
-}
 
 .about {
   position: relative;
@@ -126,7 +138,7 @@ body {
 
   &__bottom {
     display: flex;
-    padding: 0 63px;
+    padding: 0 65px;
   }
 
   &__card {
@@ -148,14 +160,14 @@ body {
   }
 
   &__card-title {
-    font-size: 24px;
+    font-size: $sizeBig;
     line-height: 38.4px;
     color: $color-description;
     margin-bottom: 15px;
   }
 
   &__card-description {
-    font-size: 15px;
+    font-size: $sizeNormal;
     line-height: 25.5px;
     color: $color-gray;
   }
@@ -174,17 +186,10 @@ body {
   &__top-description {
     font-size: 40px;
     line-height: 54px;
-    color: $color-description;
     margin-top: 34px;
   }
 }
 
-.title {
-  font-size: 14px;
-  color: $link-hover;
-  line-height: 15.4px;
-  text-transform: uppercase;
-}
 
 .right {
   &__top {
@@ -196,13 +201,13 @@ body {
     font-size: 18px;
     line-height: 28px;
     color: $color-link;
-    margin-bottom: 10px;
-    padding-top: 10px;
+    margin: 10px 0;
+
   }
 
   &__top-description {
-    font-size: 15px;
-    line-height: 25.5px;
+    font-size: $sizeNormal;
+    line-height: 25px;
     color: $color-gray;
   }
 }
@@ -277,32 +282,21 @@ body {
   }
 
   &__text-title {
-    font-size: 14px;
-    line-height: 15.4px;
+    font-size: $sizeNormal;
+    line-height: 15px;
     letter-spacing: 2px;
     text-align: left;
   }
 
   &__text-subtitle {
     font-size: 32px;
-    line-height: 38.4px;
+    line-height: 38px;
     text-align: left;
   }
 
   &__content-btn {
-    font-size: 15px;
     font-weight: 700;
-    line-height: 30px;
-    color: $color-white;
-    padding: 13px 37px;
     background-color: $link-hover;
-
-    &:hover {
-      background-color: $btn-hover;
-    }
-
-    transition: background-color 0.3s ease-in-out;
-    z-index: 2;
   }
 }
 
@@ -340,7 +334,7 @@ body {
   }
 
   &__box-title {
-    font-size: 24px;
+    font-size: $sizeBig;
     line-height: 33px;
     color: $color-link;
   }
@@ -400,15 +394,13 @@ body {
   }
 
   &__subtitle {
-    font-size: 32px;
-    line-height: 38.4px;
     max-width: 388px;
     margin-bottom: 12px;
   }
 
   &__description {
     font-size: 14px;
-    line-height: 25.5px;
+    line-height: 25px;
     color: $color-gray;
     max-width: 456px;
   }
@@ -434,44 +426,41 @@ body {
 
   &__links-title {
     font-size: 18px;
-    line-height: 25.2px;
+    line-height: 25px;
     color: $color-link;
   }
 
   &__links-proc {
-    font-size: 15px;
-    line-height: 23.4px;
+    font-size: $sizeNormal;
+    line-height: 25px;
     color: $color-gray;
+  }
+}
+
+.gradient {
+  &:before {
+    content: "";
+    position: absolute;
+    height: 10px;
+    background: linear-gradient(90deg, #ff4803 0%, #ffae35 59.74%);
   }
 }
 
 .line1 {
   &:before {
-    content: "";
-    position: absolute;
     width: 540px;
-    height: 10px;
-    background: linear-gradient(90deg, #ff4803 0%, #ffae35 59.74%);
   }
 }
 
 .line2 {
   &:before {
-    content: "";
-    position: absolute;
     width: 480px;
-    height: 10px;
-    background: linear-gradient(90deg, #ff4803 0%, #ffae35 59.74%);
   }
 }
 
 .line3 {
   &:before {
-    content: "";
-    position: absolute;
     width: 570px;
-    height: 10px;
-    background: linear-gradient(90deg, #ff4803 0%, #ffae35 59.74%);
   }
 }
 
@@ -500,8 +489,6 @@ body {
 
   &__subtitle {
     display: block;
-    font-size: 32px;
-    line-height: 41.6px;
     padding-top: 26px;
   }
 
@@ -523,7 +510,7 @@ body {
   }
 
   &__box-name {
-    font-size: 24px;
+    font-size: $sizeBig;
     line-height: 30px;
     color: $color-white;
     margin-bottom: 5px;
@@ -536,19 +523,9 @@ body {
   }
 
   &__btn {
-    margin-top: 80px;
-    padding: 13px 37px;
     background: $link-hover;
-    font-size: 15px;
-    line-height: 30px;
     font-weight: 700;
-    color: $color-white;
-    margin-bottom: 115px;
-
-    &:hover {
-      background: $btn-hover;
-      transition: background 0.3s linear;
-    }
+    margin: 80px 0 115px;
   }
 }
 
@@ -580,7 +557,7 @@ body {
   background-color: #3a0f73;
 
   &__container {
-    padding: 334px 120px 215px;
+    padding: 335px 120px 215px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -590,13 +567,13 @@ body {
   &__text {
     position: relative;
     font-size: 18px;
-    line-height: 28.8px;
+    line-height: 28px;
     letter-spacing: 0.2px;
     color: $color-white;
     text-align: center;
-    max-width: 824px;
+    max-width: 825px;
     width: 100%;
-    margin-bottom: 64px;
+    margin-bottom: 65px;
 
     &:before {
       content: "testimonials";
@@ -614,6 +591,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
   }
 
   &__img {
@@ -625,13 +603,7 @@ body {
 
   &__fio {
     font-size: 14px;
-    line-height: 22.4px;
-    color: $color-white;
-  }
-
-  &__name {
-    font-size: 14px;
-    line-height: 22.4px;
+    line-height: 22px;
     color: $color-white;
   }
 
@@ -654,9 +626,6 @@ body {
   &__subtitle {
     display: block;
     margin-bottom: 15px;
-    font-size: 32px;
-    line-height: 41.6px;
-    color: $color-link;
   }
 
   &__list {
@@ -668,7 +637,7 @@ body {
 
   &__items {
     text-align: left;
-    font-size: 15px;
+    font-size: $sizeNormal;
     line-height: 21px;
 
     &:hover {
@@ -684,7 +653,6 @@ body {
 
   &__tag {
     padding-top: 28px;
-
   }
 
   &__style {
@@ -714,7 +682,7 @@ body {
 
   &__text {
     padding-top: 20px;
-    font-size: 24px;
+    font-size: $sizeBig;
     line-height: 33px;
     color: $color-link;
     max-width: 326px;
@@ -722,12 +690,12 @@ body {
   }
 
   &__link {
-    font-size: 15px;
+    font-size: $sizeNormal;
     line-height: 31px;
     color: $link-hover;
 
     &:hover {
-      color: #8D2701;
+      color: $btn-hover;
       transition: color .3s linear;
     }
   }
@@ -758,11 +726,10 @@ body {
 
 
   &__text-subtitle {
-    font-size: 24px;
+    font-size: $sizeBig;
     line-height: 33px;
     color: $color-link;
   }
-
 
   &__form-top {
     margin-bottom: 30px;
@@ -772,7 +739,6 @@ body {
       line-height: 21px;
       color: $color-gray;
     }
-
   }
 
   &__form-name {
@@ -815,17 +781,9 @@ body {
 
   &__form-btn {
     margin-top: 65px;
-    font-size: 14px;
     font-weight: 700;
-    line-height: 21px;
-    color: $color-white;
     padding: 17px 38px;
     background: $link-hover;
-
-    &:hover {
-      background: $btn-hover;
-      transition: background 0.3s linear;
-    }
   }
 }
 
@@ -844,6 +802,13 @@ body {
 
   &__top-left {
     margin-right: 120px;
+
+    a:not(:first-child) {
+      font-size: $sizeNormal;
+      line-height: 22.5px;
+      color: $color-white;
+      opacity: .6;
+    }
   }
 
   &__top-logo {
@@ -852,24 +817,16 @@ body {
     display: block;
     margin-bottom: 20px;
     color: $border-color;
-
   }
 
   &__phone {
-    font-size: 15px;
-    line-height: 22.5px;
-    color: $color-white;
-    opacity: .6;
     margin-right: 20px;
   }
 
   &__span {
-    font-size: 15px;
-    line-height: 22.5px;
-    color: $color-white;
-    opacity: .6;
     position: relative;
     margin-right: 10px;
+    color: #A0A0A0;
 
     &:before {
       content: "";
@@ -882,16 +839,8 @@ body {
     }
   }
 
-  &__mail {
-    font-size: 15px;
-    line-height: 22.5px;
-    color: $color-white;
-    opacity: .6;
-  }
-
   &__top-right {
     display: flex;
-
   }
 
   &__list {
@@ -900,20 +849,17 @@ body {
     }
   }
 
-  &__links {
-  }
-
   &__link-bold {
     display: block;
-    font-size: 24px;
-    line-height: 31.2px;
+    font-size: $sizeBig;
+    line-height: 31px;
     color: $color-white;
     margin-bottom: 20px;
   }
 
   &__link {
     font-size: 14px;
-    line-height: 19.4px;
+    line-height: 19px;
     color: #BABABA;
     display: block;
     margin-bottom: 10px;
@@ -930,7 +876,7 @@ body {
   }
 
   &__bottom-text {
-    font-size: 15px;
+    font-size: $sizeNormal;
     line-height: 30px;
     letter-spacing: 0.3px;
     color: #BABABA;
